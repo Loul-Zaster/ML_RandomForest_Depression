@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Sentiment Prediction</title>
+</head>
+<body>
+    <h1>Predict Sentiment from Tweet</h1>
+    <form action="/predict" method="post">
+        <label for="tweet">Enter Tweet:</label><br><br>
+        <textarea id="tweet" name="tweet" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if result %}
+        <h2>Prediction: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
+
